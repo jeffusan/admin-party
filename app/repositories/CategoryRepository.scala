@@ -54,7 +54,7 @@ object AnormCategoryRepository extends CategoryRepository with JSONTranslation {
         )
         select row_to_json(data) from data;
          """
-      ).on('name -> name).as(simple_build.single)
+      ).on('name -> name).as(simple.single)
     }
   }
 

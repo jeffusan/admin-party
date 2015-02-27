@@ -63,9 +63,9 @@ object AnormSubCategoryRepository extends SubCategoryRepository with JSONTransla
         select json_build_object(
           'id', data.id,
           'name', data.name,
-          'region', json_build_object('id', data.category_id, 'name', category.name))
-            from data, region
-          where region.id = data.category_id;
+          'category', json_build_object('id', data.category_id, 'name', category.name))
+            from data, category
+          where category.id = data.category_id;
          """
       ).on('name -> name, 'category_id -> categoryId).as(simple_build.single)
     }
