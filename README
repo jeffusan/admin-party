@@ -1,4 +1,27 @@
-This is your new Play application
+This is the admin party
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+This is a very simple rest API demonstrating some of the features of Postgres 9.4
+JSON SQL with the Anorm database framework.
+
+To properly enjoy this application, you must have a running instance of Postgres 9.4.
+Also you should configure it by adding details to conf/application.conf
+
+Then, if the gods favor you, you may cd to the admin-party directory, and run activator.
+And run the app!
+
+URLS/
+====
+
+/  returns the default play page
+/category returns a list of categories in json
+/subcategory returns a list of subcategories
+/category/:id returns a single category
+/subcategory/:id returns a single subcategory
+
+PUT /category should work
+PUT /subcategory should also work
+
+DELETE /category/:id should work, same with the subcategory.
+
+POST /category should also work etc
